@@ -14,10 +14,10 @@ $app->get('/', function() {
 	$page = new Page();
 
 	$page->setTPL("index");
-//	$sql = new Hcode\DB\Sql();
+	//$sql = new Hcode\DB\Sql();
 	//$sql = new Sql();
-//	$results = $sql->select("SELECT * FROM tb_users");
-//	echo json_encode($results);
+	//$results = $sql->select("SELECT * FROM tb_users");
+	//echo json_encode($results);
 
 });
 
