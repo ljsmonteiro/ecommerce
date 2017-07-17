@@ -1,22 +1,20 @@
 <?php 
 
 require_once("vendor/autoload.php");
-//require_once("config.php");
 
-$app = new \Slim\Slim();
+use \Slim\Slim;
+use \Hcode\Page;
+
+$app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function() {
-
-	// echo "ok";
     
-	$sql = new Hcode\DB\Sql();
-	//$sql = new Sql();
+	$page = new Page();
 
-	$results = $sql->select("SELECT * FROM tb_users");
-
-	echo json_encode($results);
+	$page->setTPL("index");
+	
 
 });
 
